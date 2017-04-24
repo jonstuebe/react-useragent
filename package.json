@@ -2,20 +2,13 @@
   "name": "react-useragent",
   "version": "0.4.1",
   "description": "Higher order component to add user agent information to your react components",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "author": "Jon Stuebe",
   "homepage": "https://github.com/jonstuebe/react-useragent#readme",
   "license": "MIT",
   "scripts": {
-    "build": "sagui build",
-    "dist": "sagui dist",
-    "start": "sagui develop --port 3000",
-    "test": "sagui test",
-    "test:lint": "sagui test:lint",
-    "test:typecheck": "sagui test:typecheck",
-    "test:unit": "sagui test:unit --coverage",
-    "test:unit:watch": "sagui test:unit --watch",
-    "prepublish": "sagui build"
+    "build": "babel --presets es2015,stage-0,react -d lib/ src/",
+    "prepublish": "npm run build"
   },
   "peerDependencies": {
     "react": "^15.5.4"
@@ -28,8 +21,11 @@
     "agent"
   ],
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "mobile-detect": "^1.3.6",
-    "react": "^15.5.4",
-    "sagui": "^8.0.7"
+    "react": "^15.5.4"
   }
 }
