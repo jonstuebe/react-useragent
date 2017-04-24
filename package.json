@@ -1,0 +1,43 @@
+{
+  "name": "react-useragent",
+  "version": "0.1.0",
+  "description": "Higher order component to add user agent information to your react components",
+  "main": "./lib/index.js",
+  "author": "Jon Stuebe",
+  "license": "MIT",
+  "scripts": {
+    "clean": "node_modules/.bin/rimraf lib",
+    "lint": "eslint src",
+    "build": "node_modules/.bin/cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "prepublish": "npm run clean && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^4.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
+    "mobile-detect": "^1.3.6",
+    "react": "^15.5.4",
+    "rimraf": "^2.6.1"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "keywords": [
+    "react",
+    "javascript",
+    "useragent",
+    "user",
+    "agent"
+  ]
+}
