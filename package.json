@@ -1,6 +1,6 @@
 {
   "name": "react-useragent",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Higher order component to add user agent information to your react components",
   "main": "dist/index.js",
   "author": "Jon Stuebe",
@@ -28,8 +28,8 @@
     "agent"
   ],
   "devDependencies": {
-    "react": "^15.5.4",
     "mobile-detect": "^1.3.6",
+    "react": "^15.5.4",
     "sagui": "^8.0.7"
   }
 }
