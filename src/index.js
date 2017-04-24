@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-import MobileDetect from 'mobile-detect';
+import React, { Component } from 'react'
+import MobileDetect from 'mobile-detect'
 
 const withUserAgent = ComposedComponent => class extends Component {
-  constructor(props) {
-    super(props);
-    /* eslint-disable no-undef */
-    const md = new MobileDetect(window.navigator.userAgent);
-    /* eslint-enable no-undef */
+  constructor (props) {
+    super(props)
+    const md = new MobileDetect(window.navigator.userAgent)
 
     this.state = {
       ua: {
@@ -14,15 +12,13 @@ const withUserAgent = ComposedComponent => class extends Component {
         phone: md.phone(),
         tablet: md.tablet(),
         os: md.os(),
-        md,
-      },
-    };
+        md
+      }
+    }
   }
-  render() {
-    /* eslint-disable */
-    return <ComposedComponent ua={this.state.ua} {...this.props} />;
-    /* eslint-enable */
+  render () {
+    return <ComposedComponent ua={this.state.ua} {...this.props} />
   }
-};
+}
 
-export default withUserAgent;
+export default withUserAgent
