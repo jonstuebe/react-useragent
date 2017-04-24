@@ -28,7 +28,7 @@
     "agent"
   ],
   "files": [
-    "dist"
+    "dist/"
   ],
   "devDependencies": {
     "mobile-detect": "^1.3.6",
