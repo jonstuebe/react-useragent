@@ -1,6 +1,6 @@
 {
   "name": "react-useragent",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Higher order component to add user agent information to your react components",
   "main": "dist/index.js",
   "author": "Jon Stuebe",
