@@ -16,9 +16,9 @@ class App extends Component {
   render() {
     <div>
         {this.props.ua.mobile ? (
-        <input type="date">
+        <input type="date" />
         ) : (
-        <input type="text">
+        <input type="text" />
         )}
     </div>
   }
