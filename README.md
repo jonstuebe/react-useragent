@@ -12,7 +12,7 @@ $ yarn add react-useragent
 import React, { Component } from 'react'
 import withUserAgent from 'react-useragent';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     <div>
         {this.props.ua.mobile ? (
@@ -23,6 +23,8 @@ export default class App extends Component {
     </div>
   }
 }
+
+export default withUserAgent(App);
 ```
 
 ## API
