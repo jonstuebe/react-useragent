@@ -1,6 +1,6 @@
 {
   "name": "react-useragent",
-  "version": "0.3.6",
+  "version": "0.3.5",
   "description": "Higher order component to add user agent information to your react components",
   "main": "dist/index.js",
   "author": "Jon Stuebe",
@@ -15,7 +15,7 @@
     "test:typecheck": "sagui test:typecheck",
     "test:unit": "sagui test:unit --coverage",
     "test:unit:watch": "sagui test:unit --watch",
-    "prepare": "sagui build"
+    "prepublish": "sagui build"
   },
   "peerDependencies": {
     "react": "^15.5.4"
