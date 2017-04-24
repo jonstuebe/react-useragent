@@ -1,5 +1,11 @@
 # React User Agent
 
+## Install
+
+```
+$ yarn add react-useragent
+```
+
 ## Usage
 
 ```
