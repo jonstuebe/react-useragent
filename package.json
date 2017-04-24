@@ -9,16 +9,15 @@
   "scripts": {
     "build": "sagui build",
     "dist": "sagui dist",
-    "prepublish": "sagui build",
     "start": "sagui develop --port 3000",
     "test": "sagui test",
     "test:lint": "sagui test:lint",
     "test:typecheck": "sagui test:typecheck",
     "test:unit": "sagui test:unit --coverage",
-    "test:unit:watch": "sagui test:unit --watch"
+    "test:unit:watch": "sagui test:unit --watch",
+    "prepublish": "sagui build"
   },
   "peerDependencies": {
-    "mobile-detect": "^1.3.6",
     "react": "^15.5.4"
   },
   "keywords": [
@@ -29,6 +28,8 @@
     "agent"
   ],
   "devDependencies": {
+    "react": "^15.5.4",
+    "mobile-detect": "^1.3.6",
     "sagui": "^8.0.7"
   }
 }
