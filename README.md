@@ -8,9 +8,51 @@ $ yarn add react-useragent
 
 ## Usage
 
+### Children Function
+
 ```
-import React, { Component } from 'react'
-import withUserAgent from 'react-useragent';
+import React, { Component } from 'react';
+import { UserAgent } from 'react-useragent';
+
+class App extends Component {
+  render() {
+    <div>
+      <UserAgent>
+        {({ ua }) => {
+          return ua.mobile ? <input type="date" /> : <input type="text">;
+        }}
+      </UserAgent>
+    </div>
+  }
+}
+
+export default App;
+```
+
+### Render Prop
+
+```
+import React, { Component } from 'react';
+import { UserAgent } from 'react-useragent';
+
+class App extends Component {
+  render() {
+    <div>
+      <UserAgent render={({ ua }) => {
+        return ua.mobile ? <input type="date" /> : <input type="text">;
+      }} />
+    </div>
+  }
+}
+
+export default App;
+```
+
+### HOC
+
+```
+import React, { Component } from 'react';
+import { withUserAgent } from 'react-useragent';
 
 class App extends Component {
   render() {
@@ -29,7 +71,7 @@ export default withUserAgent(App);
 
 ## API
 
-This HOC uses mobile-detect for user agent parsing. The following object is exposed to the component through props. The key "md" is the actual mobile-detect constructor and is available to call any mobile-detect methods that are not included by default as props.
+This utility uses mobile-detect for user agent parsing. The following object is exposed to the component through props/args (depending on the usage). The key "md" is the actual mobile-detect constructor and is available to call any mobile-detect methods that are not included by default.
 
 ```
 {
