@@ -1,6 +1,6 @@
 {
   "name": "react-useragent",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Utility to add user agent information to your react components",
   "main": "lib/index.js",
   "author": "Jon Stuebe",
