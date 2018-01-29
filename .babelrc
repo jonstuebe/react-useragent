@@ -1,0 +1,26 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 3 versions"]
+        },
+        "modules": false,
+        "useBuiltIns": false
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "external-helpers",
+    "transform-class-properties"
+  ],
+  "env": {
+    "test": {
+      "presets": [["env"], "react"],
+      "plugins": ["transform-class-properties"]
+    }
+  }
+}

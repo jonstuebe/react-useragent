@@ -1,31 +1,53 @@
 {
   "name": "react-useragent",
   "version": "1.0.0",
-  "description": "Utility to add user agent information to your react components",
-  "main": "lib/index.js",
+  "description":
+    "Utility to add user agent information to your react components",
   "author": "Jon Stuebe",
   "homepage": "https://github.com/jonstuebe/react-useragent#readme",
   "license": "MIT",
+  "browser": "lib/reactUserAgent-umd.js",
+  "main": "lib/reactUserAgent-cjs.js",
+  "module": "lib/reactUserAgent-es.js",
+  "jsnext:main": "lib/reactUserAgent-es.js",
+  "umdName": "reactUserAgent",
+  "source": "src/index.js",
+  "private": false,
+  "files": ["lib/"],
   "scripts": {
-    "build": "babel --presets es2015,stage-0,react -d lib/ src/",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "build": "rollup -c",
+    "start": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonstuebe/react-useragent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonstuebe/react-useragent/issues"
+  },
+  "keywords": ["react", "javascript", "useragent", "user", "agent"],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-jest": "^22.1.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "rollup": "^0.52.3",
+    "rollup-plugin-auto-external": "^1.0.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0"
   },
   "peerDependencies": {
-    "react": "^15.5.4"
-  },
-  "keywords": [
-    "react",
-    "javascript",
-    "useragent",
-    "user",
-    "agent"
-  ],
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "react": "^15.5.4"
+    "prop-types": "^15.0.0 || ^16.0.0",
+    "react": "^15.0.0 || ^16.0.0"
   },
   "dependencies": {
     "mobile-detect": "^1.3.6"
