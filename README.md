@@ -2,8 +2,36 @@
 
 ## Install
 
+npm
+
+```shell
+npm i --save react-useragent
+```
+
+or yarn
+
 ```shell
 yarn add react-useragent
+```
+
+## Importing
+
+### ES6
+
+```javascript
+import { UserAgent } from "react-useragent";
+```
+
+### ES5 (CommonJS)
+
+```javascript
+const { UserAgent } = require("react-useragent");
+```
+
+### ES5 (UMD Build)
+
+```javascript
+var UserAgent = ReactUserAgent.UserAgent;
 ```
 
 ## Usage
@@ -19,7 +47,7 @@ class App extends Component {
     <div>
       <UserAgent>
         {({ ua }) => {
-          return ua.mobile ? <input type="date" /> : <input type="text">;
+          return ua.mobile ? <input type="date" /> : <input type="text" />>;
         }}
       </UserAgent>
     </div>
@@ -39,7 +67,7 @@ class App extends Component {
   render() {
     <div>
       <UserAgent render={({ ua }) => {
-        return ua.mobile ? <input type="date" /> : <input type="text">;
+        return ua.mobile ? <input type="date" /> : <input type="text" />>;
       }} />
     </div>
   }

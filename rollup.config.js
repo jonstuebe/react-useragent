@@ -26,7 +26,7 @@ export default [
     globals: {
       react: "React",
       "prop-types": "PropTypes",
-      "mobile-detect": "mobileDetect"
+      "mobile-detect": "MobileDetect"
     }
   },
   {
