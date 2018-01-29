@@ -1,8 +1,7 @@
 {
   "name": "react-useragent",
-  "version": "1.1.1-alpha",
-  "description":
-    "Utility to add user agent information to your react components",
+  "version": "1.1.2-alpha",
+  "description": "Utility to add user agent information to your react components",
   "author": "Jon Stuebe",
   "homepage": "https://github.com/jonstuebe/react-useragent#readme",
   "license": "MIT",
@@ -13,7 +12,9 @@
   "umdName": "ReactUserAgent",
   "source": "src/index.js",
   "private": false,
-  "files": ["lib/"],
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "prepublish": "npm run build",
     "build": "rollup -c",
@@ -26,7 +27,13 @@
   "bugs": {
     "url": "https://github.com/jonstuebe/react-useragent/issues"
   },
-  "keywords": ["react", "javascript", "useragent", "user", "agent"],
+  "keywords": [
+    "react",
+    "javascript",
+    "useragent",
+    "user",
+    "agent"
+  ],
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
