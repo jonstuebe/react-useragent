@@ -30,6 +30,14 @@ const { UserAgent } = require("react-useragent");
 
 ### ES5 (UMD Build)
 
+```html
+<head>
+  <!-- make sure and also include react and react-dom -->
+  <script src="https://unpkg.com/mobile-detect@1.4.1/mobile-detect.js" />
+  <script src="https://unpkg.com/react-useragent@1.1.1/lib/index.js" />
+</head>
+```
+
 ```javascript
 var UserAgent = ReactUserAgent.UserAgent;
 ```
